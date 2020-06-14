@@ -1,14 +1,10 @@
 Starting G-Code
 
 G28 ; home all axes
-G29 ; bltouch bedleveling
 G1 X5 Y10 Z0.2 F3000 ; get ready to prime
 G92 E0 ; reset extrusion distance
-M300 S1000 P500 ; chirp
-G1 X0.1 Y200.0 Z0.3 F1500.0 E15 ; Draw the first line
-G1 X0.4 Y200.0 Z0.3 F5000.0 ; Move to side a little
-G1 X0.4 Y20 Z0.3 F1500.0 E30 ; Draw the second line
-G92 E0 ; reset extrusion distance
+G1 X160 E15 F600 ; prime nozzle
+G1 X180 F5000 ; quick wipe
 
 Ending G-Code
 
